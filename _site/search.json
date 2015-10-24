@@ -1,0 +1,69 @@
+[
+
+  
+    {
+      "title"			: "A 101 Noob Intro to Programming Smart Contracts on Ethereum",
+      "link"			: "http://localhost:4000/articles/101-noob-intro/",
+      "excerpt"		: "For super noobs."
+    }
+  
+
+  
+    ,{
+      "title"			: "Just Enough Bitcoin for Ethereum",
+      "link"			: "http://localhost:4000/articles/just-enough-bitcoin-1/",
+      "excerpt"		: "Part 1 of a 2-part series on understanding Bitcoin and Ethereum."
+    }
+  
+
+  
+    ,{
+      "title"			: "Truffle Tricks for Ethereum Development",
+      "link"			: "http://localhost:4000/articles/truffle-tricks-for-ethereum/",
+      "excerpt"		: "Dispelling 8 Myths & First Impressions."
+    }
+  
+
+  
+    ,{
+      "title"			: "2nd ConsenSys dApp-a-thon Recap",
+      "link"			: "http://localhost:4000/articles/2nd-dappathon-video/",
+      "excerpt"		: "Video summary of our 2nd DApp hackathon."
+    }
+  
+
+  
+    ,{
+      "title"			: "1st ConsenSys dApp-a-thon Recap",
+      "link"			: "http://localhost:4000/articles/1st-dappathon-video/",
+      "excerpt"		: "Video summary of our 1st ever DApp hackathon."
+    }
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    ,{
+      "title"			: "About",
+      "link"			: "http://localhost:4000/about/",
+      "excerpt"		: "So Simple is a responsive Jekyll theme for your words and images."
+    }
+  
+
+  
+
+  
+
+  
+
+]

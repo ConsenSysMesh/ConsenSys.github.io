@@ -1,0 +1,16 @@
+# Site navigation links
+
+- title: Articles
+  url: /articles/
+
+- title: About
+  url: /about/
+
+- title: Github
+  url: https://github.com/consensys
+
+- title: ConsenSys
+  url: https://consensys.net
+
+- title: Search
+  url: /search/

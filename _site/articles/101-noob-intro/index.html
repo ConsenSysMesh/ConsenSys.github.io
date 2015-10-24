@@ -1,0 +1,560 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>A 101 Noob Intro to Programming Smart Contracts on Ethereum &#8211; </title>
+<meta name="description" content="For super noobs.">
+<meta name="keywords" content="101, noobs, truffle">
+
+  
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="A 101 Noob Intro to Programming Smart Contracts on Ethereum">
+<meta name="twitter:description" content="For super noobs.">
+
+<meta name="twitter:creator" content="@ohmu808">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A 101 Noob Intro to Programming Smart Contracts on Ethereum">
+<meta property="og:description" content="For super noobs.">
+<meta property="og:url" content="http://localhost:4000/articles/101-noob-intro/">
+<meta property="og:site_name" content="">
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/articles/101-noob-intro/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title=" Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<!-- Webfonts -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,300italic,600,600italic,700italic|Lato:400,700,900|Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/images/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/images/favicon.png">
+<!-- 256x256 -->
+<link rel="shortcut icon" href="http://localhost:4000/images/fav256.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/articles/" >Articles</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/about/" >About</a></li>
+		  
+		    
+		        
+		        
+		    <li><a href="https://github.com/consensys" target="_blank">Github</a></li>
+		  
+		    
+		        
+		        
+		    <li><a href="https://consensys.net" target="_blank">ConsenSys</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="http://localhost:4000/" class="site-logo" rel="home" title=""><img src="http://localhost:4000/images/site-logo.png" width="254" height="70" alt=" logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="http://localhost:4000/"><img src="http://localhost:4000/images/site-title@2x.png" width="280" height="74" alt=" logo" class="animated fadeInDown"></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description"></h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <span class="entry-tags"><a href="http://localhost:4000/tags/#101" title="Pages tagged 101">101</a>&nbsp;&bull;&nbsp;<a href="http://localhost:4000/tags/#noobs" title="Pages tagged noobs">noobs</a>&nbsp;&bull;&nbsp;<a href="http://localhost:4000/tags/#truffle" title="Pages tagged truffle">truffle</a></span>
+        
+          <h1 class="entry-title">A 101 Noob Intro to Programming Smart Contracts on Ethereum</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+          
+        
+        <span class="author vcard">By <span class="fn">Eva, with lots of suggestions and corrections from Consensys developers</span></span>
+        <span class="entry-date date published"><time datetime="2015-10-26T00:00:00-04:00"><i class="fa fa-calendar-o"></i> October 26, 2015</time></span>
+        
+        
+        <span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=101,noobs,truffle&amp;text=A%20101%20Noob%20Intro%20to%20Programming%20Smart%20Contracts%20on%20Ethereum&amp;url=http://localhost:4000/articles/101-noob-intro/&amp;via=ohmu808" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/101-noob-intro/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=http://localhost:4000/articles/101-noob-intro/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+      </footer>
+      <div class="entry-content">
+        <p><em>Some people say Ethereum is too logic-heavy and hard to use, but here’s a write-up to give you a feel for building smart contracts and applications with it. Tools, wallets, applications and the ecosystem are still in development and it’ll get easier!</em></p>
+
+<ul>
+  <li><strong><a href="#parti">Part I</a></strong> is an overview of key terms and discusses <strong><a href="#clients_languages">Ethereum Clients and Smart Contract Languages</a></strong>.</li>
+  <li><strong><a href="#partii">Part II</a></strong> discusses overall workflow and some current <strong>DApp Frameworks and Tools</strong> and</li>
+  <li><strong><a href="#partiii">Part III</a></strong> is a the <strong>Programming Part</strong>, a quick walkthrough of writing tests for a smart contract and building a DApp using Truffle.</li>
+</ul>
+
+<p><a name="parti"></a></p>
+
+<h2 id="part-i-intro">Part I. Intro</h2>
+
+<p>If you’re new to <em>all</em> this cryptocurrency stuff, including Bitcoin and how it works, check out the first couple chapters of Andreas Antonopoulos’ <a href="https://github.com/aantonop/bitcoinbook">Bitcoin Book</a> to dip your toe in the water. Then head over to the <a href="https://github.com/ethereum/wiki/wiki/White-Paper">Ethereum Whitepaper</a>.</p>
+
+<p>If you start getting into some murky sections and would rather build something to get familiar first, then just read on. You don’t have to understand all the crypto economic computer science to start building, and a lot of that paper is about Ethereum’s improvements over Bitcoin’s architecture.</p>
+
+<h4 id="starter-tutorials">Starter Tutorials</h4>
+
+<p>The official place to start is Ethereum’s <a href="https://ethereum.github.io/solidity/">Solidity tutorial</a>. Another good place to start with smart contracts (where I started) is <a href="https://dappsforbeginners.wordpress.com">dappsForBeginners</a>, although it might be outdated. Another good place is at <a href="https://ethereum.org/greeter">ethereum.org/greeter</a> and the follow-up token and crowdsale tutorials. Those are good for learning Solidity.</p>
+
+<p>The goal of this write-up is to introduce some basic developer tools that make starting out with Ethereum, smart contracts and building DApps (decentralized apps) easier, and to try to explain the overall flow of what’s going on. This is from my (still-noob) perspective and with much help from the cool developers at ConsenSys.</p>
+
+<h4 id="basic-concepts">Basic Concepts</h4>
+
+<p>It’d be good to know some of these terms: </p>
+
+<p><strong><em>Public Key Cryptography.</em></strong>  Alice has a public key and private key. She can use her private key to create a digital signature, and Bob can use Alice’s public key to verify that a signature is really from Alice’s private key, i.e., really from Alice. When you create an Ethereum or Bitcoin wallet the long ‘0xdf…5f’ address is a public key and the private key is stored somewhere. A Bitcoin wallet service like Coinbase stores your wallet’s complementary private key for you, or you can store it yourself. If you lose your private key for a wallet with funds on Bitcoin or Ethereum, you’ll lose all your funds forever, so it’s good to back up your keys. It hurts to learn this the hard way, although plenty of people have done it.</p>
+
+<p><strong><em>Peer-to-Peer Networking.</em></strong>  Like BitTorrent, all Ethereum nodes are peers in a distributed network, there’s no centralized server. [In the future, there’ll be hybrid semi-centralized services for Ethereum as a convenience to users and developers, more on that later.]</p>
+
+<p><strong><em>Blockchain.</em></strong>  Like a global ledger or simple database of all transactions, the entire history of all transactions on the network.</p>
+
+<p><strong><em>Ethereum Virtual Machine.</em></strong>  So you can write more powerful programs than on top of Bitcoin. It refers to the blockchain, what executes smart contracts, everything.</p>
+
+<p><strong><em>Node.</em></strong>  Using this to mean you can run a node and through it read and write to the Ethereum blockchain, i.e., use the Ethereum Virtual Machine. A full node has to download the entire blockchain. Light nodes are possible but in the works, see the Ethereum whitepaper.</p>
+
+<p><strong><em>Miner.</em></strong>  A node on the network that mines, i.e., works to process blocks on the blockchain. You can see a partial list of live Ethereum miners here: <a href="https://stats.ethdev.com/">stats.ethdev.com</a>.</p>
+
+<p><strong><em>Proof of Work.</em></strong>  Miners compete to do some math problem. The first one to solve the problem (the next block on the Blockchain) wins a reward: some ether. Every node then updates to that new block. Every miner wants to win the next new block so are incentivized to keep up to date and have the one true blockchain everybody else has, so the network always achieves consensus. [Note: Ethereum is planning to move to a Proof of Stake system without miners eventually, but that’s beyond noob scope.]</p>
+
+<p><strong><em>Ether.</em></strong>  Or ETH for short. It’s a real digital currency you can buy and use! See <a href="https://poloniex.com/exchange#usdt_eth">this chart</a>. At the time of writing, 1 ETH is worth about 65 cents in USD.</p>
+
+<p><strong><em>Gas.</em></strong>  Running and storing things on Ethereum costs small amounts of ether. Keeps things efficient.</p>
+
+<p><strong><em>DApp.</em></strong>  Decentralized App, what applications using smart contracts are called in the Ethereum community. The goal of a DApp is (well, should be) to have a nice UI to your smart contracts plus any extra niceties like IPFS (a neat way to store and serve stuff in a decentralized network, unrelated to Ethereum but a kindred spirit). While DApps can be run from a central server if that server can talk to an Ethereum node, they can also be run locally on any Ethereum node peer.</p>
+
+<p>For another noob angle on some of the concepts above here’s a good read: <a href="https://medium.com/@ConsenSys/time-sure-does-fly-ed4518792679">Just Enough Bitcoin for Ethereum</a>.</p>
+
+<p><a name="clients_languages"></a></p>
+
+<h2 id="ethereum-clients-smart-contract-languages">Ethereum Clients, Smart Contract Languages</h2>
+
+<p>You don’t have to run an Ethereum node to write and deploy smart contracts. See Browser-based IDEs and APIs below. But if you’re learning, run an Ethereum node, it’s good to get to know as a basic component and not hard to set up.</p>
+
+<h4 id="clients-for-running-an-ethereum-node">Clients for Running an Ethereum Node</h4>
+
+<p>Ethereum has several different client implementations (meaning ways to run a node to interact with the Ethereum network) including C++, Go, Python, Java, Haskell, etc. Why? Different strokes for different folks (like how the Haskell one is supposedly mathematically verifiable), and it improves the security and ecosystem of Ethereum to have so many.</p>
+
+<p>At the time of writing, I’ve been using geth, the Go language one (go-ethereum) and on other days a tool called testrpc that uses the Python client, pyethereum. The examples will involve those tools.</p>
+
+<p>[Sidebar: I’ve also tried the C++ one and still use its ethminer component for mining along with geth as the node, so different pieces can work together. Sidebar on Mining: Mining can be fun, sort of like having a houseplant you tend to, and another way to learn about the ecosystem….even if the price of ETH right now is not worth the local electricity costs of mining.]</p>
+
+<p><strong><em>Interactive Console.</em></strong> Once you have a node using one of the clients, you can sync with the blockchain, create wallets and send and receive real ether. One way to do that with geth is through the <a href="https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console">JavaScript console</a>. Another way is via <a href="https://github.com/ethereum/wiki/wiki/JSON-RPC">JSON RPC</a> (remote procedure calls) using a command like cURL for getting stuff via URLs. However the goal of this article is to walk you through a DApp development scenario so let’s just move on. But these tools are good to remember for debugging, configuring nodes and using a wallet via command line.</p>
+
+<p><strong><em>Running a node on a test network.</em></strong> If you install geth and run it on the live network, it will take a while to download the entire blockchain and sync with the network. (You can check that it’s synced by seeing that you have the latest block which is listed at the top of stats.ethdev.com and comparing that number to the block number output by your client node.)</p>
+
+<p>However to run smart contracts on the live network you’d have to cough up some real ether. Instead there are ways to run clients on a local testnet for for free. They won’t download the full blockchain and will create a private instance of the network with its own blockchain, so faster to use for development.</p>
+
+<p><strong><em>testrpc.</em></strong> One way of getting a testnet running is using testrpc. Testrpc will create a bunch of pre-funded accounts for you that will be listed when it starts up. Here’s the <a href="https://github.com/ConsenSys/eth-testrpc">Eth-testrpc github repo</a> but it can be installed via command line using pip. (Will review everything you need to install again in the tutorial part later.)</p>
+
+<p>Testrpc is also super fast, so easier to develop and test with. Start with testrpc. When your contracts are in good shape, move to geth on a testnet, which can be started by specifying a networkid like: <code>geth --networkid “12345”</code></p>
+
+<p>Let’s talk about programming languages next, then we can dive into actually coding stuff.</p>
+
+<h4 id="programming-languages-for-smart-contracts">Programming Languages for Smart Contracts</h4>
+
+<p><strong><em>Just use Solidity.</em></strong> To write smart contracts there are a few different languages: Solidity, which is like JavaScript and has .sol as a file extension, Serpent, Python-like with extension .se, and a 3rd, LLL, based on Lisp. Serpent was popular a while back but Solidity is the most popular right now and is more robust, so just use Solidity. You prefer Python? Use Solidity.</p>
+
+<p><strong><em>solc Compiler.</em></strong> After writing a contract in Solidity, use solc to compile it. It’s from the C++ libraries (different implementations complementing each other again) which can be <a href="https://github.com/ethereum/webthree-umbrella/wiki">installed here</a>. [If you don’t want to install solc you can also just use a browser-based compiler like the <a href="https://chriseth.github.io/browser-solidity/">Solidity real-time compiler</a> or <a href="http://cosmo.to/">Cosmo</a>, but the programming part of this tutorial will assume you have solc installed.]</p>
+
+<p>[Note: Ethereum’s libraries are undergoing active development and sometimes things get out of sync with new versions. Make sure you have the latest dev version. Or make sure you have a stable version. Ask in the Ethereum Gitter’s on Github or forums.ethereum.org what version people are using if things that used to work stop working.]</p>
+
+<p><strong><em>web3.js API.</em></strong> Once a contract is compiled with solc and sent to the network, you can call it using the Ethereum <a href="https://github.com/ethereum/wiki/wiki/JavaScript-API">web3.js JavaScript API</a> and build web apps that interact with contracts. (No need to install this yet, read up on DApp Frameworks below first.) </p>
+
+<p>So Solidity and web3.js API: 2 basic tools for coding smart contracts and interacting with them to build DApps.</p>
+
+<p><a name="partii"></a></p>
+
+<h2 id="part-ii-dapp-frameworks-tools-and-workflow">Part II. DApp Frameworks, Tools and Workflow</h2>
+
+<p><a name="workflow"></a></p>
+
+<h4 id="workflow-for-deploying-smart-contracts">Workflow for Deploying Smart Contracts</h4>
+
+<p>The workflow is:</p>
+
+<ol>
+  <li>Start an <strong>Ethereum node</strong> (e.g. geth or testrpc)</li>
+  <li><strong>Compile</strong> your Solidity smart contract using solc =&gt; get back the binary</li>
+  <li><strong>Deploy</strong> your compiled contract to the network. (This step costs ether and signs the contract using your node’s default wallet address, or you can specify another address.)
+=&gt; get back the contract’s blockchain address and ABI (a JSON-ified representation of
+your compiled contract’s variables, events and methods that you can call)</li>
+  <li><strong>Call</strong> stuff in the contract using web3.js’s JavaScript API to interact with it (This step may cost ether depending on the type of invocation.)</li>
+</ol>
+
+<p>This workflow is depicted in the diagram below in greater detail:</p>
+
+<figure>
+	<img src="http://localhost:4000/images/front-end.png" alt="front-end workflow" />
+</figure>
+
+<p>Note: You could build a DApp that provides a UI for users to deploy a contract then use it (Steps 1 or 4). Or your DApp could assume the contract’s already been deployed (common) and start the UI flow from there (Step 6).</p>
+
+<p><a name="dapp_frameworks_tools"></a></p>
+
+<p><strong><em>DApp-building Frameworks.</em></strong> You can do all these steps with just the tools mentioned above, but some helpful devs have created DApp frameworks to make development easier. The one that got me started is <a href="https://github.com/ConsenSys/truffle">Truffle</a>. (Before Truffle I watched a group of smart student interns last summer code stuff for a sleepless hackathon and shrank back in fear. Then Truffle came along and did a lot of the nitty gritty stuff in the diagram above for you, so you can start writing, compiling, deploying and testing smart contracts right away.) Another very similar framework for building and testing DApps is <a href="https://iurimatias.github.io/embark-framework">Embark</a>. Between those two, I’ve only used Truffle, but there are very successful DApp devs in both camps.</p>
+
+<p>Other stacks DApp devs use include web3.js + <a href="https://www.meteor.com/">Meteor</a> which is a general webapp framework (The <a href="https://github.com/ethereum/meteor-dapp-wallet">ethereum-meteor-wallet</a> repo has a good starter example, and <a href="https://github.com/SilentCicero">SilentCiero on github</a> is building a lot of Meteor integrations with web3.js and DApp boilerplates). I’ve downloaded and run cool DApps that do things this way. There’ll be some interesting discussion of all of these tools and best practices for building DApps at <a href="devcon.ethereum.org">Ethereum’s ÐΞVCON1 conference</a> Nov. 9-13th (which will also be streamed or on youtubed).</p>
+
+<p><strong><em>APIs.</em></strong> <a href="http://blockapps.net">BlockApps.net</a> is creating a REST API for DApps based on a Haskell node they run as a centralized service to save you the trouble of running a local Ethereum node. This departs from the completely decentralized model of DApps but is useful when running an Ethereum node locally isn’t realistic. For example if you want to serve your DApp to users who won’t be running local nodes either and reach a wider audience with just a web browser or mobile device. BlockApps is developing a command line tool called <a href="https://github.com/blockapps/bloc">bloc</a> that can be used after creating a developer account with them.</p>
+
+<p><strong><em>If users have to run a local Ethereum node to use DApps isn’t that a dealbreaker?</em></strong> Like BlockApps there are a range of tools in development so this won’t be. <a href="https://metamask.io/">Metamask</a>, <a href="https://github.com/ethereum/webthree-umbrella/releases/tag/1.0rc2">AlethZero or AlethOne</a> and a <a href="https://github.com/ConsenSys/eth-lightwallet">LightWallet</a> ConsenSys is building are ways to make running a node easy, and light (SPV) nodes, sharding are in the works or planned. It’s a P2P ecosystem but can involve hybrid architectures.</p>
+
+<h4 id="smart-contract-ides">Smart Contract IDEs</h4>
+
+<p><strong><em>IDEs.</em></strong>There’s a <a href="https://github.com/ethereum/wiki/wiki/Mix:-The-DApp-IDE">Mix IDE</a> for writing contracts put out by Ethereum. Haven’t tried it but will soon.</p>
+
+<p><strong><em>Browser-based IDEs.</em></strong> There’s a browser-based <a href="https://chriseth.github.io/browser-solidity">Solidity real-time compiler</a> just for compiling smart contracts. You can  point your local node at this hosted instance by opening up a port (You should trust the site and not have your life savings in ether on your local node for that). Another browser-based IDE is <a href="http://cosmo.to">Cosmo</a>. They’re a fast way to get started compiling your smart contracts. But once your contract is working ok it’s nice to use a framework for adding a UI and packaging it all up as a DApp, which is what Truffle does and will be in the tutorial part later.</p>
+
+<p>Another powerful enterprise-y browser IDE is going to be launched soon by <a href="http://frontier.ether.camp">Ether.Camp</a>. Their IDE comes with a sandbox test network with a GUI for testing (instead of writing tests manually as shown in the tutorial later) as well as a sandbox network explorer at <a href="http://test.ether.camp">test.ether.camp</a>. When you’re ready to deploy your contract for semi-real, using their testnet can a good way to confirm your smart contract’s working as expected on a closer-to-real testbed. The same explorer for the live Ethereum network is at <a href="http://frontier.ether.camp/">frontier.ether.camp</a> and it shows details about every transaction ever. Ether.Camp’s IDE is invite-only for eager guinea pigs at time of writing but will be launched soon. </p>
+
+<p><strong><em>Sample Contracts.</em></strong> Search github for DApp repos and .sol files to see what cool stuff people do and how. A big list of DApps with repos is also here: <a href="http://dapps.ethercasts.com">dapps.ethercasts.com</a>, although some list details a little out of date. <a href="http://ether.fund/contracts">Ether.fund/contracts</a> also has some examples of Solidity and Serpent contracts people have written, but not sure if these have been tested or verified for correctness.</p>
+
+<p><a name="partiii"></a>
+<a name="programming_part"></a></p>
+
+<h2 id="part-iii-the-programming-part-finally">Part III. The Programming Part, Finally</h2>
+
+<h4 id="testing-in-truffle">Testing in Truffle</h4>
+
+<p><a href="https://github.com/consensys/truffle">Truffle</a> is great for test-driven development of smart contracts which is highly recommended to maintain sanity when you’re starting to learn how things work. It’s also useful as a way to learn to write promises in JavaScript, i.e., deferred and asynchronous callbacks. Promises are like “do this, then when that comes back, do that, and when that comes back, do this other thing…and we don’t want to be kept waiting while all that’s going on, ok?” Truffle uses a JS promises framework called <a href="https://github.com/ConsenSys/ether-pudding">Pudding</a> on top of web3.js (so it installs web3.js for you too).</p>
+
+<p><strong><em>Transaction times.</em></strong>  Promises are extremely useful for DApps because transactions need to be mined into the blockchain (takes 12-15 seconds in Ethereum). Even if they don’t seem to take that long on a test network it may take longer on the live network, or to find out it didn’t happen (e.g. your transaction could have ran out of gas, or was mined into a block that’s been orphaned).</p>
+
+<p>So let’s copy a simple smart contract and write a test for it. </p>
+
+<h4 id="using-truffle">Using Truffle</h4>
+
+<p>Make sure you have 1. <a href="https://github.com/ethereum/webthree-umbrella/wiki">solc</a> installed and 2. <a href="https://github.com/ConsenSys/eth-testrpc">testrpc</a>. (For testrpc you’ll need python and <a href="https://pip.pypa.io/en/stable/installing/">pip</a>. If you’re new to python, to install it you may also need a <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">virtualenv</a>, a way to keep python libraries separate on a single computer.)</p>
+
+<p>Install 3. <a href="https://github.com/ConsenSys/truffle">Truffle</a> (You can do this using NodeJS’s npm: <code>npm install -g truffle</code>, the <code>-g</code> may require sudo).  <code>truffle list</code> will list all truffle commands. Create and change into a new project directory and do <code>truffle init</code> in a terminal window. This will create this directory structure:
+<figure class="third">
+	<img src="http://localhost:4000/images/truffle-directories.png" alt="truffle directories" />
+</figure></p>
+
+<p>Start a client node in a new console window by running <code>testrpc</code>: 
+<figure class="half">
+	<img src="http://localhost:4000/images/testrpc-start.png" alt="testrpc startup screen" />
+</figure></p>
+
+<p>In the first truffle console window, now type <code>truffle deploy</code>. This will deploy the Example contract <code>truffle init</code> created. Any errors messages you may have will show up in the testrpc console window or the truffle window.</p>
+
+<p>As you’re developing you can do <code>truffle compile</code> to make sure your contracts compile, <code>truffle deploy</code> to compile and deploy it to the network, and <code>truffle test</code> will run your smart contract tests.</p>
+
+<p>But let’s start with getting to <code>truffle test</code> with a real example.</p>
+
+<h4 id="first-contract-first-test">First Contract, First Test</h4>
+
+<p>Here’s a Solidity contract for a Conference where registrants can buy tickets, and the organizer can set a maximum quota of attendees as well as provide refunds.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">contract</span> <span class="nx">Conference</span> <span class="p">{</span>
+	<span class="nx">address</span> <span class="kr">public</span> <span class="nx">organizer</span><span class="p">;</span>
+	<span class="nx">mapping</span> <span class="p">(</span><span class="nx">address</span> <span class="o">=&gt;</span> <span class="nx">uint</span><span class="p">)</span> <span class="nx">registrantsPaid</span><span class="p">;</span>
+	<span class="nx">uint</span> <span class="kr">public</span> <span class="nx">numRegistrants</span><span class="p">;</span>
+	<span class="nx">uint</span> <span class="kr">public</span> <span class="nx">quota</span><span class="p">;</span>
+
+	<span class="nx">event</span> <span class="nx">Deposit</span><span class="p">(</span><span class="nx">address</span> <span class="nx">_from</span><span class="p">,</span> <span class="nx">uint</span> <span class="nx">_amount</span><span class="p">);</span> <span class="c1">// so you can log these events</span>
+	<span class="nx">event</span> <span class="nx">Refund</span><span class="p">(</span><span class="nx">address</span> <span class="nx">_to</span><span class="p">,</span> <span class="nx">uint</span> <span class="nx">_amount</span><span class="p">);</span> 
+
+	<span class="kd">function</span> <span class="nx">Conference</span><span class="p">()</span> <span class="p">{</span>	<span class="c1">// Constructor</span>
+		<span class="nx">organizer</span> <span class="o">=</span> <span class="nx">msg</span><span class="p">.</span><span class="nx">sender</span><span class="p">;</span>		
+		<span class="nx">quota</span> <span class="o">=</span> <span class="mi">500</span><span class="p">;</span>
+		<span class="nx">numRegistrants</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="kd">function</span> <span class="nx">buyTicket</span><span class="p">()</span> <span class="kr">public</span> <span class="nx">returns</span> <span class="p">(</span><span class="nx">bool</span> <span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span><span class="nx">numRegistrants</span> <span class="o">&gt;=</span> <span class="nx">quota</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span> <span class="p">}</span>
+		<span class="nx">registrantsPaid</span><span class="p">[</span><span class="nx">msg</span><span class="p">.</span><span class="nx">sender</span><span class="p">]</span> <span class="o">=</span> <span class="nx">msg</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+		<span class="nx">numRegistrants</span><span class="o">++</span><span class="p">;</span>
+		<span class="nx">Deposit</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">sender</span><span class="p">,</span> <span class="nx">msg</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+		<span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="kd">function</span> <span class="nx">getRegPaid</span><span class="p">(</span><span class="nx">address</span> <span class="nx">_address</span><span class="p">)</span> <span class="kr">public</span> <span class="nx">returns</span> <span class="p">(</span><span class="nx">uint</span> <span class="nx">amtPaid</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="nx">registrantsPaid</span><span class="p">[</span><span class="nx">_address</span><span class="p">];</span>
+	<span class="p">}</span>
+	<span class="kd">function</span> <span class="nx">changeQuota</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">newquota</span><span class="p">)</span> <span class="kr">public</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">sender</span> <span class="o">!=</span> <span class="nx">organizer</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+		<span class="nx">quota</span> <span class="o">=</span> <span class="nx">newquota</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="kd">function</span> <span class="nx">refundTicket</span><span class="p">(</span><span class="nx">address</span> <span class="nx">recipient</span><span class="p">,</span> <span class="nx">uint</span> <span class="nx">amount</span><span class="p">)</span> <span class="kr">public</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">sender</span> <span class="o">!=</span> <span class="nx">organizer</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+		<span class="k">if</span> <span class="p">(</span><span class="nx">registrantsPaid</span><span class="p">[</span><span class="nx">recipient</span><span class="p">]</span> <span class="o">==</span> <span class="nx">amount</span><span class="p">)</span> <span class="p">{</span> 
+			<span class="nx">address</span> <span class="nx">myAddress</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+			<span class="k">if</span> <span class="p">(</span><span class="nx">myAddress</span><span class="p">.</span><span class="nx">balance</span> <span class="o">&gt;=</span> <span class="nx">amount</span><span class="p">)</span> <span class="p">{</span> 
+				<span class="nx">recipient</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">amount</span><span class="p">);</span>
+				<span class="nx">registrantsPaid</span><span class="p">[</span><span class="nx">recipient</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+				<span class="nx">numRegistrants</span><span class="o">--</span><span class="p">;</span>
+				<span class="nx">Refund</span><span class="p">(</span><span class="nx">recipient</span><span class="p">,</span> <span class="nx">amount</span><span class="p">);</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="kd">function</span> <span class="nx">destroy</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// so funds not locked in contract forever</span>
+		<span class="k">if</span> <span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">sender</span> <span class="o">==</span> <span class="nx">organizer</span><span class="p">)</span> <span class="p">{</span> 
+			<span class="nx">suicide</span><span class="p">(</span><span class="nx">organizer</span><span class="p">);</span> <span class="c1">// send funds to organizer</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Let’s deploy this. </p>
+
+<h5 id="steps">Steps:</h5>
+<figure>
+	<img src="http://localhost:4000/images/truffle-steps.png" alt="truffle directories" />
+</figure>
+
+<p>[Note: At time of writing I have solc 0.1.3+ (installed via brew), Truffle v0.2.1, Eth-testrpc v0.1.18 (using a venv) on Mac OS X 10.10.5.]</p>
+
+<h4 id="deploying-the-contract">Deploying the Contract</h4>
+
+<p><strong><em>Create a new smart contract.</em></strong> Copy-paste the Conference contract into <code>contracts/Conference.sol</code>. Then in the file <code>config/app.json</code>, edit the “deploy” array to include “Conference”.</p>
+
+<p><strong><em>Start testrpc.</em></strong> Start testrpc via <code>testrpc</code> if its not already running.</p>
+
+<p>(If you’re using <a href="https://github.com/ethereum/go-ethereum/">geth</a>, this line was working for me:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">geth</span> <span class="o">--</span><span class="nx">rpc</span> <span class="o">--</span><span class="nx">rpcaddr</span><span class="o">=</span><span class="s2">&quot;0.0.0.0&quot;</span> <span class="o">--</span><span class="nx">rpccorsdomain</span><span class="o">=</span><span class="s2">&quot;*&quot;</span> <span class="o">--</span><span class="nx">mine</span> <span class="o">--</span><span class="nx">unlock</span><span class="o">=</span><span class="s1">&#39;0 1&#39;</span> <span class="o">--</span><span class="nx">verbosity</span><span class="o">=</span><span class="mi">5</span> <span class="o">--</span><span class="nx">maxpeers</span><span class="o">=</span><span class="mi">0</span> <span class="o">--</span><span class="nx">minerthreads</span><span class="o">=</span><span class="s1">&#39;4&#39;</span>  <span class="o">--</span><span class="nx">networkid</span> <span class="s1">&#39;12345&#39;</span></code></pre></div>
+
+<p>This unlocks two accounts. 1. You may need to enter the passwords to both accounts after the geth console starts up. 2. You may also need a <a href="https://github.com/ethereum/go-ethereum/wiki/Connecting-to-the-network#custom-networks">test-genesis.json</a> file with both accounts funded under ‘alloc’.)</p>
+
+<p><strong><em>Compile or Deploy.</em></strong> Run <code>truffle compile</code> to see if it compiles, or just do <code>truffle deploy</code> to compile and deploy at once. This will add the deployed contract’s address and ABI (in config/development/contracts.json), which is what <code>truffle test</code> and <code>truffle build</code> will pull in information from later to interact with the contract. </p>
+
+<p><strong><em>Errors?</em></strong> Did that compile? Errors messages may show up in the testrpc console or the truffle console.</p>
+
+<p><strong><em>Redeploy after restarting a node!</em></strong>  If you stop your testrpc node, remember to redeploy the contracts using <code>truffle deploy</code> before trying to use them again. Each time testrpc restarts its a blank slate blockchain.</p>
+
+<h4 id="analyzing-the-contract">Analyzing the Contract</h4>
+
+<p>Let’s start with the variables at the top of the smart contract:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">address</span> <span class="kr">public</span> <span class="nx">organizer</span><span class="p">;</span>
+<span class="nx">mapping</span> <span class="p">(</span><span class="nx">address</span> <span class="o">=&gt;</span> <span class="nx">uint</span><span class="p">)</span> <span class="nx">registrantsPaid</span><span class="p">;</span>
+<span class="nx">uint</span> <span class="kr">public</span> <span class="nx">numRegistrants</span><span class="p">;</span>
+<span class="nx">uint</span> <span class="kr">public</span> <span class="nx">quota</span><span class="p">;</span></code></pre></div>
+
+<p><strong><em>address.</em></strong> The first variable is the ethereum address of the organizer, or owner, of this contract. This is set when the “Conference” constructor is called.</p>
+
+<p><strong><em>uint.</em></strong> An unsigned integer.</p>
+
+<p><strong><em>public.</em></strong> Means it can be called from outside the contract. A private modifier would mean it can only be called from within the contract (or by derived contracts). If you’re trying to call a variable from a test make sure its public.</p>
+
+<p><strong><em>Mappings or Arrays.</em></strong> Before Solidity added support for arrays, mappings like <code>mapping (address =&gt; uint)</code> were used. This could also be written as <code>address registrantsPaid []</code> but mappings have a smaller footprint. This mapping will be used to store how much each registrant (represented by their wallet address) has paid so they can get refunds later on.</p>
+
+<p><strong><em>More on addresses.</em></strong> Your client node (i.e., geth or testrpc in these examples) can have one or more accounts. In testrpc, on startup an array of 10 “Available Addresses” are displayed:</p>
+
+<figure class="half">
+	<figcaption><strong>testrpc Accounts:</strong></figcaption>
+	<img src="http://localhost:4000/images/testrpc-accounts.png" alt="testrpc accounts" />
+</figure>
+
+<p>The first one is default for calling contracts, <code>accounts[0]</code>. So if you want the contract owner/organizer to be <code>accounts[0]</code>, in JavaScript you can call the constructor this way:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">Conference</span><span class="p">.</span><span class="k">new</span><span class="p">({</span> <span class="nx">from</span><span class="o">:</span> <span class="nx">accounts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">});</span></code></pre></div>
+
+<p><strong><em>Owner address vs. Contract address.</em></strong> Your deployed contract also has its own contract address (different from the organizer/owner) on the blockchain that you can see in the bottom of <code>config/development/contracts.json</code> after <code>truffle deploy</code>. This address is accessible in a Solidity contract using <code>this</code>, as used inside the refundTicket function in the contract: <code>address myAddress = this;</code></p>
+
+<p><strong><em>Suicide, a good thing in Solidity.</em></strong> Funds sent to the contract are held in the contract itself. In the destroy function above funds are finally released to the organizer set in the constructor. <code>suicide(organizer);</code> does this. Without it, funds can end up locked in the contract forever (somebody on reddit lost some ether this way), so make sure to include that method if your contract collects funds!</p>
+
+<p>If you want to simulate another user or counterparty (e.g. simulate a buyer if you’re a seller), you can use another address from the accounts array. To buy a ticket as a different user, accounts[1], use it in the <code>from</code> field:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">conference</span><span class="p">.</span><span class="nx">buyTicket</span><span class="p">({</span> <span class="nx">from</span><span class="o">:</span> <span class="nx">accounts</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nx">value</span><span class="o">:</span> <span class="nx">some_ticket_price_integer</span> <span class="p">});</span></code></pre></div>
+
+<p><strong><em>Some Function Calls can be Transactions.</em></strong> Function calls that change the state of the contract (modify values, add records, etc.) are <strong>transactions</strong> and have implicit sender and value. So inside curly braces <code>{ from: ___, value: ___ }</code> can be specified in a web3.js function call to sending funds to a function from a wallet address. On the Solidity end, you can retrieve these values using the implicit msg.sender and msg.value:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">buyTicket</span><span class="p">()</span> <span class="kr">public</span> <span class="p">{</span>
+	<span class="p">...</span>
+	<span class="nx">registrantsPaid</span><span class="p">[</span><span class="nx">msg</span><span class="p">.</span><span class="nx">sender</span><span class="p">]</span> <span class="o">=</span> <span class="nx">msg</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+	<span class="p">...</span>
+<span class="p">}</span></code></pre></div>
+
+<p><strong><em>Events.</em></strong> <code>Deposit</code> and <code>Send</code> in the contract are events that can be logged in the Ethereum Virtual Machine logs. They don’t actually do anything, but are good practice for keeping track that a transaction has happened.</p>
+
+<p>Okay, let’s write a test for this smart contract to make sure it works.</p>
+
+<h4 id="writing-a-test">Writing a Test</h4>
+
+<p>In your project folder’s <code>test/</code> directory rename the example.js test file to conference.js. Modify all instances of “Example” to “Conference”.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">contract</span><span class="p">(</span><span class="nx">Conference</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">accounts</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">it</span><span class="p">(</span><span class="s2">&quot;should assert true&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">conference</span> <span class="o">=</span> <span class="nx">Conference</span><span class="p">.</span><span class="nx">at</span><span class="p">(</span><span class="nx">Conference</span><span class="p">.</span><span class="nx">deployed_address</span><span class="p">);</span>
+    <span class="nx">assert</span><span class="p">.</span><span class="nx">isTrue</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+    <span class="nx">done</span><span class="p">();</span>   <span class="c1">// stops tests at this point</span>
+  <span class="p">});</span>
+<span class="p">});</span></code></pre></div>
+
+<p>On running <code>truffle test</code> from the project’s root directory you should see the test pass. In the test above truffle gets the contract’s address on the blockchain from <code>Conference.deployed_address</code>.</p>
+
+<p>Let’s write a test to initialize a new Conference and check that the initial variables are being set correctly. Replace the test in conference.js with this one:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">contract</span><span class="p">(</span><span class="nx">Conference</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">accounts</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">it</span><span class="p">(</span><span class="s2">&quot;Initial conference settings should match&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">conference</span> <span class="o">=</span> <span class="nx">Conference</span><span class="p">.</span><span class="nx">at</span><span class="p">(</span><span class="nx">Conference</span><span class="p">.</span><span class="nx">deployed_address</span><span class="p">);</span>  
+    <span class="c1">// same as previous example up to here</span>
+    <span class="nx">Conference</span><span class="p">.</span><span class="k">new</span><span class="p">({</span> <span class="nx">from</span><span class="o">:</span> <span class="nx">accounts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="p">})</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">conference</span><span class="p">)</span> <span class="p">{</span>
+    	<span class="nx">conference</span><span class="p">.</span><span class="nx">quota</span><span class="p">.</span><span class="nx">call</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span>
+    		<span class="kd">function</span><span class="p">(</span><span class="nx">quota</span><span class="p">)</span> <span class="p">{</span>
+    		 <span class="nx">assert</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">quota</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="s2">&quot;Quota doesn&#39;t match!&quot;</span><span class="p">);</span> 
+    		<span class="p">}).</span><span class="nx">then</span><span class="p">(</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    			<span class="k">return</span> <span class="nx">conference</span><span class="p">.</span><span class="nx">numRegistrants</span><span class="p">.</span><span class="nx">call</span><span class="p">();</span>
+    		<span class="p">}).</span><span class="nx">then</span><span class="p">(</span> <span class="kd">function</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+    			<span class="nx">assert</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">num</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Registrants should be zero!&quot;</span><span class="p">);</span>
+    			<span class="k">return</span> <span class="nx">conference</span><span class="p">.</span><span class="nx">organizer</span><span class="p">.</span><span class="nx">call</span><span class="p">();</span>
+    		<span class="p">}).</span><span class="nx">then</span><span class="p">(</span> <span class="kd">function</span><span class="p">(</span><span class="nx">organizer</span><span class="p">)</span> <span class="p">{</span>
+    			<span class="nx">assert</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">organizer</span><span class="p">,</span> <span class="nx">accounts</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;Owner doesn&#39;t match!&quot;</span><span class="p">);</span>
+    			<span class="nx">done</span><span class="p">();</span>   <span class="c1">// to stop these tests earlier, move this up</span>
+    		<span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="nx">done</span><span class="p">);</span>
+    	<span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="nx">done</span><span class="p">);</span>
+     <span class="p">});</span>
+    <span class="p">});</span></code></pre></div>
+
+<p><strong><em>Constructor.</em></strong> As mentioned earlier, <code>Conference.new({ from: accounts[0]  })</code> instantiates a new Conference by calling the contract’s constructor. That’ll return a contract object (conference).</p>
+
+<p><strong><em>Promises.</em></strong> That’s what those then and return’s above are. What’s going on above might start to look like a deeply nested function call chain like:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">conference</span><span class="p">.</span><span class="nx">numRegistrants</span><span class="p">.</span><span class="nx">call</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span>
+  <span class="kd">function</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+  	<span class="nx">assert</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">num</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Registrants should be zero!&quot;</span><span class="p">);</span>
+  	<span class="nx">conference</span><span class="p">.</span><span class="nx">organizer</span><span class="p">.</span><span class="nx">call</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span>
+  	 <span class="kd">function</span><span class="p">(</span><span class="nx">organizer</span><span class="p">)</span> <span class="p">{</span>
+     		<span class="nx">assert</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">organizer</span><span class="p">,</span> <span class="nx">accounts</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;Owner doesn&#39;t match!&quot;</span><span class="p">);</span>
+     		<span class="p">}).</span><span class="nx">then</span><span class="p">(</span>
+     			<span class="kd">function</span><span class="p">(...))</span>
+     				<span class="p">}).</span><span class="nx">then</span><span class="p">(</span>
+     					<span class="kd">function</span><span class="p">(...))</span>
+  					<span class="c1">// Because this would get hairy...</span></code></pre></div>
+
+<p>Promises allow this to be flattened to minimize nesting, allow for calls to return asynchronously and help simplify the syntax of writing “on success do this” vs. “on failure do that”. Web3.js provides callbacks for asynchronous requests (<a href="https://github.com/ethereum/wiki/wiki/JavaScript-API#using-callbacks">docs</a>) so you don’t have to wait for transactions to complete to do stuff in the front-end. (Truffle uses a promises framework wrapper to web3.js called <a href="https://github.com/ConsenSys/ether-pudding">Pudding</a>, based on the framework <a href="http://ricostacruz.com/cheatsheets/bluebird.html">Bluebird</a>, which also has advanced promise features.) </p>
+
+<p><strong><em>call().</em></strong> Use this to check the values of variables as in <code>conference.quota.call().then(...</code>. Solidity docs say this is a “message call” which is  1. not mined and so 2. doesn’t have to be from an account/wallet (therefore it’s not signed with an account holder’s private keys). Transactions on the other hand, are mined, have to be from an account (i.e., signed), and are recorded on the blockchain. Modifying any value in a contract is a transaction. Just checking a variable value is not. So don’t forget to add call() when calling variables! Crazy things can happen. [Also, if you’re trying to call a variable and having problems make sure its public.]</p>
+
+<p>Call() can also be used to call functions that are not transactions. If they are meant to be transactions and you try to call() them, they won’t execute as transactions on the blockchain.</p>
+
+<p><strong><em>assert.</em></strong> Standard JS testing assertion (if you type ‘asserts’ plural by accident truffle will have errors and you won’t know what’s going on), see the <a href="http://chaijs.com/api/assert/">Chai docs</a> for other types of assertions but <code>assert.equal</code> is usually all you need.</p>
+
+<p>Run <code>truffle test</code> again to make sure that works for you.</p>
+
+<p>More to come… will finish adding stuff soon.</p>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://localhost:4000/articles/just-enough-bitcoin-1/" class="btn" title="Just Enough Bitcoin for Ethereum">Previous</a>
+      
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2015 . <a href="https://consensys.net" rel="nofollow">ConsenSys</a>. All rights reserved.</span>
+<div class="social-icons">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  
+	
+  <a href="http://localhost:4000/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://localhost:4000';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+
+
+</body>
+</html>

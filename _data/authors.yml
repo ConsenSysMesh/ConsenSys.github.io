@@ -1,0 +1,28 @@
+# Authors
+cornelius_fiddlebone:
+  name: Cornelius Fiddlebone
+  email: cornelius@thewhip.com
+  bio: "I ordered what?"
+  avatar: bio-photo.jpg
+  twitter: rhymeswithsackit
+  google:
+    plus: CorneliusFiddlebone
+    
+tim_coulter:
+  name: Tim Coulter
+  web: https://medium.com/@timothyjcoulter
+  email: time [dot] coulter [at] consensys.net
+  bio: "Vagabond. Blockchain enthusiast."
+  twitter: timothyjcoulter
+
+mike_goldin:
+  name: Mike Goldin
+  email: mike [dot] golden [at] consensys.net
+  bio: "Mike is a Computer Science student at Columbia University."
+  twitter: mgoldin
+
+eva_shon_with_help:
+  name: Eva, with lots of suggestions and corrections from Consensys developers
+  email: eva [dot] shon [at] consensys.net
+  bio: "UX Designer at ConsenSys."
+  twitter: ohmu808
